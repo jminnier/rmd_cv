@@ -1,0 +1,377 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[left=6.1cm,top=2cm,right=1.5cm,bottom=1.5cm,nohead]{geometry}
+
+
+
+
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% Lucy's Updates
+% ----------------------------------
+
+% Custom section fonts
+\usepackage{sectsty}
+
+% Make parskips rather than indent with lists.
+\usepackage{parskip}
+\usepackage[explicit]{titlesec}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+\usepackage{xcolor}
+\usepackage{xifthen}
+
+
+\definecolor{white}{RGB}{255,255,255}
+
+\definecolor{darkgray}{HTML}{333333}
+\definecolor{gray}{HTML}{4D4D4D}
+\definecolor{lightgray}{HTML}{999999}
+
+\definecolor{green}{HTML}{C2E15F}
+\definecolor{orange}{HTML}{FDA333}
+\definecolor{purple}{HTML}{D3A4F9}
+\definecolor{red}{HTML}{FB4485}
+%\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{blue}{HTML}{26D1EA}
+
+
+
+\colorlet{fillheader}{gray}
+\colorlet{header}{white}
+\colorlet{textcolor}{gray}
+\colorlet{headercolor}{gray}
+
+
+
+\usepackage[]{fontspec}
+
+
+\usepackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
+\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\color{gray}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+
+\newcounter{colorCounter}
+\def\@sectioncolor#1#2#3{%
+  {%
+    \color{%
+      \ifcase\value{colorCounter}%
+        blue\or%
+        red\or%
+        orange\or%
+        green\or%
+        purple\or%
+        blue\or%
+        red\else%
+        headercolor\fi%
+    } #1#2#3%
+  }%
+  \stepcounter{colorCounter}%
+}
+
+
+\renewcommand{\section}[1]{
+  \par\vspace{\parskip}
+  {%
+    \LARGE\headingfont\color{headercolor}%
+     \@sectioncolor #1%
+  }
+  \par\vspace{\parskip}
+}
+
+
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\newenvironment{aside}{%
+  \let\oldsection\section
+  \renewcommand{\section}[1]{
+    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+  }
+  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{flushright}
+  \obeycr
+}{%
+  \restorecr
+  \end{flushright}
+  \end{textblock}
+  \let\section\oldsection
+}
+
+\usepackage{hyperref}
+\usepackage{tikz}
+
+\newcommand{\rolefont}{%
+  \fontsize{14pt}{24pt}\selectfont%
+  \thinfont%
+  \color{white}%
+}
+
+\newcommand{\header}[3]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+    \node [anchor=center] (name) at (box) {%
+      \fontsize{40pt}{72pt}\color{header}%
+      {\thinfont #1}{\bodyfont  #2}
+    };
+    \node [anchor=north] at (name.south) {%
+      \fontsize{14pt}{24pt}\color{header}%
+      \thinfont #3%
+    };
+  \end{tikzpicture}
+  \vspace{2.5cm}
+  \vspace{-2\parskip}
+}
+
+\newcommand{\fn}[1]{
+\hfill {\small\addfontfeature{Color=lightgray} #1}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\footnotesize \addfontfeature{Color=lightgray}Created by Lucy in RMarkdown, inspired by the LaTeX \href{http://www.latextemplates.com/template/friggeri-resume-cv}{Friggeri} template.}
+
+\usepackage{tabto}
+\parindent0em\parskip1em
+\usepackage{tikzsymbols}
+\begin{document}
+\pagenumbering{gobble}
+\header{Lucy}{D'Agostino McGowan}{\href{mailto:}{\href{mailto:ld.mcgowan@vanderbilt.edu}{\nolinkurl{ld.mcgowan@vanderbilt.edu}}}} 
+
+\begin{aside}
+\section{contact}
+2525 West End 11000 Nashville, TN 37203
+\section{website}
+\href{www.lucymcgowan.com}{www.lucymcgowan.com}
+\section{twitter}
+\href{http://twitter.com/LucyStats}{LucyStats}
+\section{github}
+\href{http://github.com/LucyMcGowan}{LucyMcGowan}
+\section{orcid}
+\href{http://orcid.org/0000-0001-7297-9359}{0000-0001-7297-9359}
+\section{languages}
+proficient Italian literary, written, \& oral skills
+\section{programming}
+\textbf{dev:} R \textbf{use:} R, SAS, Stata, Python, ArcGIS 
+\section{defining attributes}
+goal-driven leadership, advanced analytic skills, strategic thinking,
+resourceful team player, sunny disposition \(\Springtree\), public
+speaking, organizational \& communication skills
+\end{aside}
+
+\section{Interests}
+\vspace{-0.25cm}
+propensity score analyses, \texttt{R} package development, observational
+study methods, predictive modeling, large-scale inference,
+\href{https://rladies.org}{R-Ladies}, engaging beginners in \texttt{R}
+package development with \href{http://ropensci.org}{rOpenSci} through
+\href{https://github.com/LucyMcGowan/contributr}{\texttt{contributr}},
+disparities research, community-based participatory research
+
+\section{Education}
+\vspace{-0.25cm}
+    \textbf{PhD} Student in Biostatistics, GPA 3.95 \fn{Vanderbilt University}\\
+     \\
+    \textbf{MS} in Biostatistics, December 2013, GPA 3.88 \fn{Washington University School of Medicine}\\
+         Thesis: \emph{Quantitative Assessment of the Community Research Fellows
+     Training Program}\\
+      \\
+    \textbf{BA} with Distinction and Highest Honors \fn{University of North Carolina at Chapel Hill}\\
+         Religious Studies: GPA 3.92 Romance Languages: GPA 3.86\\
+      \\
+\vspace{-0.85cm}
+\section{Research Experience}
+\vspace{-0.25cm}
+\setlength{\tabcolsep}{0pt}
+ \begin{tabular}{p{3.25cm} p{10.25cm}}
+March 2017-present &{\textbf{RStudio}, upcoming internship under Jenny Bryan}
+\end{tabular}\\
+ \begin{tabular}{p{3.25cm} p{10.25cm}}
+2016-2017 &{\textbf{Vanderbilt University}, NIH Big Data to Knowledge Training Fellow}
+\end{tabular}\\
+ \begin{tabular}{p{3.25cm} p{10.25cm}}
+2015-2016 &{\textbf{Vanderbilt University}, Research Assistant, Department of Biostatistics and VA Tennessee Valley}
+\end{tabular}\\
+ \begin{tabular}{p{3.25cm} p{10.25cm}}
+Summer 2015 &{\textbf{Cleveland Clinic}, Graduate Fellow, Department of Quantitative Health Sciences}
+\end{tabular}\\
+ \begin{tabular}{p{3.25cm} p{10.25cm}}
+2012-2014 &{\textbf{Washington University School of Medicine}, Statistical Data Analyst promoted from Research Assistant, Department of
+Surgery, Division of Public Health Sciences}
+\end{tabular}\\
+
+\vspace{-0.5cm}
+\section{Awards}
+\vspace{-0.25cm}
+\TabPositions{1.5cm}
+    2016 \tab{First Place, GSS Student Data Challenge, ASA Joint Statistical Meeting} \\
+    2016 \tab{Second Place, SPAAC Poster Competition, ASA Joint Statistical Meeting} \\
+    2016 \tab{Southern Startup Internship Program in Data Science (South BDHub)} \\
+    2015 \tab{First Place, GSS Student Data Challenge, ASA Joint Statistical Meeting} \\
+    2013 \tab{Best Contributed Paper in the Statistics and Data Analysis SAS Global
+Forum} \\
+    2013 \tab{First Place, Student Research Competition, 141st APHA Annual Meeting} \\
+    2013 \tab{Ellis R. Ott Scholarship: ASQ Statistics Division} \\
+    2012 \tab{Gertrude M. Cox Scholarship for Women in Statistics Honorable Mention} \\
+
+\vspace{-0.5cm}
+\section{Outreach}
+\vspace{-0.25cm}
+\TabPositions{2cm}
+    2016-2017 \tab{R-Ladies Nashville, co-founder} \\
+    2016-2017 \tab{Vanderbilt Graduate Student Council, President} \\
+    2016-2017 \tab{Vanderbilt Biostatistics Graduate Student Association, Vice President} \\
+    2016-2017 \tab{Nashville ASA Student Chapter, Vice President} \\
+    2015-2017 \tab{Tennessee Office of Refugees, Tutor} \\
+    2015 \tab{Scholarship of Teaching and Learning, Scholar} \\
+    2014-2015 \tab{Vanderbilt Graduate Student Council, VP of Social Affairs} \\
+\newgeometry{left=2cm,top=2cm,right=2cm,bottom=2cm}
+
+\section{Select Invited
+Presentations}\label{select-invited-presentations}
+
+\vspace{-0.5cm}
+
+\textbf{SAS Global Forum 2016} \fn{Oral Presentation}
+
+\begin{quote}
+\textbf{Lucy D'Agostino McGowan}, Robert A. Greevy, Jr
+\href{http://support.sas.com/resources/papers/proceedings16/11420-2016.pdf}{``Integrating
+SAS and R to Perform Optimal Propensity Score Matching.''}
+\end{quote}
+
+\textbf{SAS Global Forum 2015} \fn{Oral Presentation}
+
+\begin{quote}
+\textbf{Lucy D'Agostino McGowan}, Alice Toll
+\href{http://support.sas.com/resources/papers/proceedings15/3320-2015.pdf}{``Using
+PROC SURVEYREG and PROC SURVEYLOGISTIC to Assess Potential Bias.''}
+\end{quote}
+
+\section{Select Contributed
+Presentations}\label{select-contributed-presentations}
+
+\vspace{-0.5cm} \textbf{ENAR 2017} \fn{Oral Presentation}
+
+\begin{quote}
+\textbf{Lucy D'Agostino McGowan}, Robert Alan Greevy, Jr, ``Simplifying
+and Contextualizing Sensitivity to Unmeasured Confounding Tipping Point
+Analyses.''
+\end{quote}
+
+\textbf{ASA Joint Statistical Meeting 2016} \fn{Poster}
+
+\begin{quote}
+\textbf{Lucy D'Agostino McGowan}, Robert A. Greevy, Jr, ``Practical
+Guidance and Tools for Rule-Out Sensitivity to Unmeasured Confounding
+Analyses.''
+\end{quote}
+
+\section{Peer-reviewed Publications}\label{peer-reviewed-publications}
+
+\vspace{-0.5cm}
+
+\hypertarget{refs}{}
+\hypertarget{ref-McGowan:2016ira}{}
+\textbf{D'Agostino McGowan, Lucy}, Bullen, J. A., \& Obuchowski, N. A.
+(2016). Location Bias in ROC Studies. \emph{Statistics in
+Biopharmaceutical Research}, 00--00.
+
+\hypertarget{ref-Drake:2016ks}{}
+Drake, B. F., Brown, K., \textbf{D'Agostino McGowan, Lucy},
+Haslag-Minoff, J., \& Kaphingst, K. (2016). Secondary consent to
+biospecimen use in a prostate cancer biorepository. \emph{BMC Research
+Notes}, \emph{9}(1), 346.
+
+\hypertarget{ref-Kaphingst:2015kl}{}
+Kaphingst, K. A., Stafford, J. D., \textbf{D'Agostino McGowan, Lucy},
+Seo, J., Lachance, C. R., \& Goodman, M. S. (2015). Effects of racial
+and ethnic group and health literacy on responses to genomic risk
+information in a medically underserved population. \emph{Health
+Psychology}, \emph{34}(2), 101--110.
+
+\hypertarget{ref-Chen:2015ki}{}
+Chen, Y.-H., \textbf{D'Agostino McGowan, Lucy}, Cimino, P. J., Dahiya,
+S., Leonard, J. R., Lee, D. Y., \& Gutmann, D. H. (2015). Mouse
+Low-Grade Gliomas Contain Cancer Stem Cells with Unique Molecular and
+Functional Properties. \emph{Cell Reports}, \emph{10}(11), 1899--1912.
+
+\hypertarget{ref-McGowan:2015bt}{}
+\textbf{D'Agostino McGowan, Lucy}, Stafford, J. D., Thompson, V. L.,
+Johnson-Javois, B., \& Goodman, M. S. (2015). Quantitative Evaluation of
+the Community Research Fellows Training Program. \emph{Frontiers in
+Public Health}, \emph{3}(1), 11.
+
+\hypertarget{ref-Fisher:2014jt}{}
+Fisher, M. J., Loguidice, M., Gutmann, D. H., Listernick, R., Ferner, R.
+E., Ullrich, N. J., \ldots{} Liu, G. T. (2014). Gender as a disease
+modifier in neurofibromatosis type 1 optic pathway glioma. \emph{Annals
+of Neurology}, \emph{75}(5), 799--800.
+
+\hypertarget{ref-Griffey:2014fa}{}
+Griffey, R. T., Kennedy, S. K., \textbf{D'Agostino McGowan, Lucy},
+Goodman, M., \& Kaphingst, K. A. (2014). Is low health literacy
+associated with increased emergency department utilization and
+recidivism? \emph{Academic Emergency Medicine : Official Journal of the
+Society for Academic Emergency Medicine}, \emph{21}(10), 1109--1115.
+
+\hypertarget{ref-DiggsAndrews:2014fb}{}
+Diggs-Andrews, K. A., Brown, J. A., Gianino, S. M., \textbf{D'Agostino
+McGowan, Lucy}, Rubin, J. B., Wozniak, D. F., \& Gutmann, D. H. (2014).
+Reply. \emph{Annals of Neurology}, \emph{75}(5), 800--801.
+
+\hypertarget{ref-Colditz:2014hh}{}
+Colditz, G. A., \textbf{D'Agostino McGowan, Lucy}, James, A. S., Bohlke,
+K., \& Goodman, M. S. (2014). Screening for colorectal cancer: using
+data to set prevention priorities. \emph{Cancer Causes \& Control :
+CCC}, \emph{25}(1), 93--98.
+
+\hypertarget{ref-DAgostinoMcGowan:2013ew}{}
+\textbf{D'Agostino McGowan, Lucy}, Gennarelli, R., Lyons, S., \&
+Goodman, M. (2013). Using Small-Area Analysis to Estimate County-Level
+Racial Disparities in Obesity Demonstrating the Necessity of Targeted
+Interventions. \emph{International Journal of Environmental Research and
+Public Health}, \emph{11}(1), 418--428.
+
+\end{document}

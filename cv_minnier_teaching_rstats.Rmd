@@ -1,0 +1,198 @@
+---
+title: "CV"
+author: "Jessica N. Minnier"
+email: jessica.minnier@gmail.com
+output:
+  pdf_document:
+    latex_engine: pdflatex
+    template: svm-latex-cv-jm.tex
+fontfamily: mathpazo
+fontfamilyoptions: sc, osf
+fontsize: 11pt
+geometry: margin=1in
+github: jminnier
+twitter: datapointier
+jobtitle: Assistant Professor of Biostatistics, Oregon Health & Science University
+keywords: R Markdown, academic CV, template
+linkcolor: blue
+fontawesome: yes
+address: 2020 SW Moody Ave · KR-BSR · Portland, OR 97201
+updated: no
+urlcolor: blue
+web: jessicaminnier.com
+---
+
+# Employment
+
+Assistant Professor of Biostatistics, Oregon Health & Science University \hfill 2013-present
+
+- Assistant Professor, OHSU-PSU School of Public Health
+- Biostatistician, Knight Cancer Institute Biostatistics Shared Resource
+- Biostatistician, Knight Cardiovascular Institute
+- Statistical Advisor to the Integrated Genomics Lab
+
+Post-doctoral research fellow, Fred Hutchinson Cancer Research Center \hfill 2012-2013
+
+# Education
+
+*Harvard University*, Ph.D. Biostatistics \hfill 2012
+
+*Harvard University*, A.M. Biostatistics \hfill 2009
+
+*Lewis & Clark College*, B.A. Mathematics, minor in Computer Science, *magna cum laude* \hfill 2007
+
+
+
+# Teaching
+
+### Online Materials
+
+\begin{enumerate}
+\item[2017] R Bootcamp Chapter 5: "Simple Stats and Modeling with broom", with \href{https://laderast.github.io/}{Ted Laderas, PhD} \hfill \href{https://www.datacamp.com/courses/rbootcamp}{DataCamp}, \href{https://github.com/laderast/RBootcamp/blob/master/chapter5.md}{github}
+\item[2017] Data Exploration \& Statistics, with \href{https://laderast.github.io/}{Ted Laderas, PhD}, {\em Oregon Data Science Institute} \hfill
+\href{https://minnier.shinyapps.io/ODSI_continuousData/}{learnR},
+\href{https://github.com/laderast/DSIExplore/blob/master/inst/tutorials/continuousData/continuousData.Rmd}{github}
+\end{enumerate}
+
+### R Related Workshops
+
+\begin{enumerate}
+\item[2018] Common Mistakes in Statistics \hfill OHSU BioData Club
+\item[2017] R Bootcamp (series co-taught with Ted Laderas, PhD) \hfill OHSU BioData Club
+\end{enumerate}
+
+### University Courses, Graduate Level
+
+*Mathematical Statistics II*, BSTA 552, OHSU-PSU School of Public Health \hfill 2016-2018
+
+*Reading & Research in Biostatistics*, BSTA 500, OHSU-PSU School of Public Health \hfill 2018
+
+*Hands-On Intro RNAseq*, CANB 610NN, OHSU School of Medicine, co-taught with Bioinformatics and CDCB faculty \hfill 2017
+
+*Problem Solving in Advanced Statistics*, Co-lecturer, Phd in Biostatistics Program, Harvard Biostatistics, HSPH \hfill 2012
+
+### Teaching Assistant
+
+*Harvard School of Public Health (2008-2011): *
+
+- Basics of Statistical Inference
+- Intro. Statistics for Medical Research II
+- Applied Longitudinal Data Analysis
+- Principles of Clinical Trials
+- Advanced Population and Medical Genetics (Epidemiology PhD program course, homeworks in Perl or Python)
+
+*Lewis & Clark College (2004-2007):*
+
+- Math 055: Review of Algebra
+
+
+
+
+
+# Select Invited Presentations
+
+## R Related
+
+\begin{enumerate}
+\item[2018] Shiny Apps in Genomics and Clinical Trials. R in Pharma. Cambridge, MA.
+\item[2018] Building Shiny Apps: Challenges and Responsibilities. Data Day Texas. Austin, TX.
+\item[2017] R and Machine Learning: Automated Feature Selection of Predictors in Electronic Medical Records. Portland Women Who Code Group.
+\item[2016] The START App: Shiny Transcriptome Analysis Resource Tool. Portland R User Group.
+\item[2016] Reproducible Research in Statistics. Cancer Research \& Biostatistics and OHSU Knight Cancer Biostatistics Shared Resource Summer Retreat, Cancer Research \& Biostatistics. Seattle, WA. 
+\end{enumerate}
+
+## Statistics Related
+
+\begin{enumerate}
+\item[2018] Integrative Analysis of Metabolomics and Lipidomics with Application to Microvascular Dysfunction. The Western North American Region of the International Biometric Society 2018 Annual Meeting. Edmonton, Alberta, Canada.
+\item [2017] Automated Feature Selection for Predictors in Electronic Medical Records. Lifetime Data Analysis Conference. Storrs, CT. May 27, 2017.
+\item[2014] Post PhD: What to Expect in Your First Year? Women in Statistics Conference. Research Triangle, NC. May 16, 2014.
+\item[2014] Genome-wide risk modeling with machine learning methods. GECCO Investigator Meetings, Fred Hutchinson Cancer Research Center. Seattle, WA. 
+\end{enumerate}
+
+# Select Contributed Presentations
+
+\begin{enumerate}
+\item[2018] {\bf{Minnier J}}, Laderas T. Mixing Active Learning and Lecturing: Using Interactive Visualization as a Teaching Tool. Joint Statistical Meetings. Vancouver, BC, Canada.
+\item[2018] {\bf{Minnier J}}. Building Shiny Apps: With Great Power Comes Great Responsibility. Conference in Statistical Practice. Portland, OR.
+
+\end{enumerate}
+
+# Community
+
+*Co-Organizer* Cascadia R Conference 2017, 2018 \hfill 2017-present
+
+*Co-Organizer* Cascadia OpenCon Conference 2019 \hfill 2018-present
+
+*R package reviewer* ROpenSci \hfill 2018
+
+*Faculty Advisor* Portland American Statistical Association (PASA) Student Chapter \hfill 2017-present
+
+*Oregon Chapter Representative*, American Statistical Association \hfill 2016-present
+
+*Regional Advisory Board Member*, WNAR of the International Biometrics Society \hfill 2018-present
+
+*Member*, Data Safety and Monitoring Committee, Knight Cancer Institute, OHSU \hfill 2018-present
+
+*Member*, Clinical Research Review Committee, Knight Cancer Institute, OHSU \hfill 2013-2016
+
+*Special Awards Judge*, Intel Northwest Science Expo for High School Students \hfill 2016
+
+# R Community Involvement
+
+Member and speaker:
+
+- OHSU BioData Club
+- OHSU Data Jamboree
+- Portland R User Group
+- Portland RLadies
+- Portland Women Who Code Group
+
+# Honors
+
+\begin{enumerate}
+\item[2018] NASA Datanaut, NASA
+\item[2018] Diversity Travel Scholarship to attend Rstudio::conf, Rstudio, Inc.
+\item[2017]		International Mathematical Society New Researcher’s Conference Invitee and Travel Award
+\item[2012]		Finalist Best Statistics Student Paper Award, American Public Health Association
+\item[2011]		David P. Byar Young Investigator Award for the Joint Statistical Meetings, American Statistical Association Biometrics Section
+\item[2011]		Rose Traveling Fellowship in Chronic Disease Epidemiology \& Biostatistics, Harvard School of Public Health
+\item[2011] 	Distinguished Student Paper Award, ENAR International Biometrics Society
+\item[2007]		Phi Beta Kappa, Lewis \& Clark College
+\item[2006]	Barry M. Goldwater Scholar
+\item[2003-2007]	Trustee Merit Scholarship, Lewis \& Clark College
+\end{enumerate}
+
+# Research
+
+My research interests focus on the analysis of high dimensional data including genomic data and electronic health record data, risk prediction models to improve disease screening and prevention, and statistical methodology with applications in cardiovascular health and oncology. 
+
+### Select Publications
+
+\href{https://scholar.google.com/citations?user=ZAw3q_MAAAAJ&hl=en}{google scholar} | \href{https://orcid.org/0000-0002-3527-2757
+}{orcid 0000-0002-3527-2757}
+
+## Peer-reviewed
+
+
+
+Nelson, J. W., Sklenar, J., Barnes, A. P., & **Minnier, J**. (2017). The START App: a web-based RNAseq analysis and visualization resource. Bioinformatics, 33(3), 447-449.
+
+Vasilevsky, N. A., **Minnier, J.**, Haendel, M. A., & Champieux, R. E. (2017). Reproducible and reusable research: are journal data sharing policies meeting the mark?. PeerJ, 5, e3208.
+
+**Minnier, J.**, Yuan, M., Liu, J. S., & Cai, T. (2015). Risk classification with an adaptive naive bayes kernel machine model. Journal of the American Statistical Association, 110(509), 393-404.
+
+**Minnier, J.**, Tian, L., & Cai, T. (2011). A perturbation method for inference on regularized regression estimates. Journal of the American Statistical Association, 106(496), 1371-1382.
+
+## Book Chapter
+
+**Minnier, J.**, Pennock, N. D., Guo, Q., Schedin, P., & Harrington, C. A. (2018). RNA-Seq and Expression Arrays: Selection Guidelines for Genome-Wide Expression Profiling. In Gene Expression Analysis (pp. 7-33). Humana Press, New York, NY.
+
+## Other
+
+**Minnier, J.** (2012), Inference and Prediction for High Dimensional Data via Penalized Regression and Kernel Machine Methods, Ph.D. Dissertation, Harvard University. http://nrs.harvard.edu/urn-3:HUL.InstRepos:9367010
+
+
+
+
+
